@@ -79,13 +79,12 @@ class VisionArena(gym.Env):
 		self.__load_arena()
 		self.respawn_car()
 
-	def __load_arena(self, size = 9):
+	def __load_arena(self):
 		"""
 		Function to load the arena
 		"""
-		assert size % 2 == 1, 'Size must be an odd integer'
 		
-		self.arena = np.random.randint(low = 0, high = 6, size = (size, size))
+		self.arena = np.random.randint(low = 0, high = 6, size=(9, 9))
 		# After the arena is updated, the numbers will represent
 		# Yellow Square : 6n + 1
 		# Yellow Circle : 6n + 2
