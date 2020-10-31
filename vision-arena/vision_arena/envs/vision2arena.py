@@ -12,6 +12,21 @@ class VisionArena(gym.Env):
 	metadata = {'render.modes': ['human']}
 
 	def __init__(self):
+		"""Constructor Function.
+
+		Function to initialize and load the Arena
+		List of Functions:
+			
+			move_husky
+			reset
+			camera_feed
+			remove_car
+			respawn_car
+			roll_dice
+
+		No Arguments
+		"""
+
 		np.random.seed(0)
 		p.connect(p.GUI)
 		p.setAdditionalSearchPath(pybullet_data.getDataPath())
@@ -20,26 +35,54 @@ class VisionArena(gym.Env):
 		p.configureDebugVisualizer(p.COV_ENABLE_WIREFRAME, 0)
 		p.configureDebugVisualizer(p.COV_ENABLE_SHADOWS, 0)
 		
-		self.load_arena()
+		self.__load_arena()
 		self.respawn_car()
 
 		self._width = 512
 		self._height = 512
 
 	def move_husky(self, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
-		self.move(self.husky, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel)
+		"""move_husky Function 
+		Function to give Velocities to the wheels of the robot.
+			
+		Arguments:
+		leftFrontWheel -- Velocity of the front left wheel
+		rightFrontWheel -- Velocity of the front right wheel
+		leftRearWheel -- Velocity of the rear left wheel
+		rightRearWheel -- Velocity of the rear right wheel
+
+		No Return Values.
+		"""
+
+		self.__move(self.husky, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel)
 
 	def reset(self):
+		"""reset Function
+		Function to restart the simulation.
+
+		This will undo all the previous simulation commands and the
+		arena along with the robot will be loaded again.
+		Only for testing purposes. Won't be used in final evaluation.
+
+		No Arguments.
+
+		No Return Values.
+		"""
+		np.random.seed(0)
 		p.resetSimulation()
 		p.setGravity(0,0,-10)
-		
-		#load arena
-		self.husky = p.loadURDF('husky/husky.urdf',[0,0,0],p.getQuaternionFromEuler([0,0,0]))
 
-	def load_arena(self, size = 9):
-		'''
-		Loading the Arena
-		'''
+		p.loadURDF('rsc/plane.urdf',[0,0,-0.1], useFixedBase=1)
+		p.configureDebugVisualizer(p.COV_ENABLE_WIREFRAME, 0)
+		p.configureDebugVisualizer(p.COV_ENABLE_SHADOWS, 0)
+		
+		self.__load_arena()
+		self.respawn_car()
+
+	def __load_arena(self, size = 9):
+		"""
+		Function to load the arena
+		"""
 		assert size % 2 == 1, 'Size must be an odd integer'
 		
 		self.arena = np.random.randint(low = 0, high = 6, size = (size, size))
@@ -141,15 +184,21 @@ class VisionArena(gym.Env):
 				else:
 					p.loadURDF('rsc/base plate/base plate black.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 					self.arena[i, j] = 0
-		print(self.arena)
 
-	def move(self, car, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
+	def __move(self, car, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
 		p.setJointMotorControl2(car,  2, p.VELOCITY_CONTROL, targetVelocity=leftFrontWheel, force=15)
 		p.setJointMotorControl2(car,  3, p.VELOCITY_CONTROL, targetVelocity=rightFrontWheel, force=15)
 		p.setJointMotorControl2(car,  4, p.VELOCITY_CONTROL, targetVelocity=leftRearWheel, force=15)
 		p.setJointMotorControl2(car,  5, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=15)
 
 	def camera_feed(self):
+		"""camera_feed Function
+		Function to get camera feed of the arena.
+
+		No Arguments.
+		
+		Returns -- rgb image from the camera feed
+		"""
 		look = [0, 0, 0.2]
 		cameraeyepos = [0, 0, 6.5]
 		cameraup = [0, -1, 0]
@@ -169,9 +218,23 @@ class VisionArena(gym.Env):
 		return rgb
 
 	def remove_car(self):
+		"""remove_car Function
+		Function to remove the car from the arena
+
+		No Arguments.
+
+		No Return Values.
+		"""
 		p.removeBody(self.husky)
 
 	def respawn_car(self):
+		"""respawn_car Function
+		Function to respawn the car from the arena
+
+		No Arguments.
+
+		No Return Values.
+		"""
 		np.random.seed(0)
 		pos = [[0,4], [4,0], [8,4], [4,8]]
 		ori = [-np.pi/2, 0, np.pi/2, np.pi]
@@ -179,6 +242,23 @@ class VisionArena(gym.Env):
 		self.husky = p.loadURDF('husky/husky.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
 
 	def roll_dice(self):
+		"""roll_dice Function
+		Function imitating a ludo dice
+		
+		This function gives the next shape and color to move to in the arena.
+		
+		No Arguments.
+		
+		Returns -- a random string determining the shape and color
+		The string maybe anyone of the follows:
+		square yellow
+	        circle yellow
+	        triangle yellow
+	        square red
+                circle red
+		triangle red
+		"""
+
 		x = random.randint(0,5)
 		name = basename(normpath(self.shape_color[x]))
 		return name[:-5]

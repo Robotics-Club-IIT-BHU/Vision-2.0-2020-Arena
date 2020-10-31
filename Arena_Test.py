@@ -7,13 +7,12 @@ import cv2
 
 if __name__=="__main__":
     env = gym.make("vision_arena-v0")
-    i=0
     for x in range(100):
         p.stepSimulation()
         env.move_husky(0.15, 2, 0.15, 2)
-        print(env.roll_dice())
-        if i%100==0:
+        if x%100==0:
             img = env.camera_feed()
-            cv2.imwrite('testtrun'+str(i)+'.png', img)
-        i+=1
+            cv2.imwrite('testrun'+str(x)+'.png', img)
+        if x%10==0:
+            print(env.roll_dice())
     time.sleep(100)
