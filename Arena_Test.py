@@ -11,8 +11,7 @@ if __name__=="__main__":
     for x in range(100):
         p.stepSimulation()
         env.move_husky(0.15, 2, 0.15, 2)
-        print("YES")
-        print(i)
+        print(env.roll_dice())
         if i%100==0:
             img = env.camera_feed()
             cv2.imwrite('testtrun'+str(i)+'.png', img)

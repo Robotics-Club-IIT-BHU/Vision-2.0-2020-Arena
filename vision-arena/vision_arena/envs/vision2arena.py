@@ -5,6 +5,8 @@ import pybullet as p
 import pybullet_data
 import cv2
 import numpy as np
+import random
+from os.path import normpath, basename
 
 class VisionArena(gym.Env):
 	metadata = {'render.modes': ['human']}
@@ -44,7 +46,7 @@ class VisionArena(gym.Env):
 		# After the arena is updated, the numbers will represent
 		# Yellow Square : 6n + 1
 		# Yellow Circle : 6n + 2
-		# Yellow Triangle : 6n + 4
+		# Yellow Triangle : 6n + 3
 		# Red Square : 6n + 4
 		# Red Circle : 6n + 5
 		# Red Triangle : 6n + 6
@@ -68,6 +70,7 @@ class VisionArena(gym.Env):
 			4: 'rsc/circle/circle red.urdf',
 			5: 'rsc/triangle/triangle red.urdf',
 		}
+		self.shape_color = shape_colour_dict
 		base_plate_colours = np.random.choice(4, 4, replace = False)
 		base_plate_dict = {
 			0: 'rsc/base plate/base plate green.urdf',
@@ -174,3 +177,8 @@ class VisionArena(gym.Env):
 		ori = [-np.pi/2, 0, np.pi/2, np.pi]
 		x = np.random.randint(0,3)
 		self.husky = p.loadURDF('husky/husky.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
+
+	def roll_dice(self):
+		x = random.randint(0,5)
+		name = basename(normpath(self.shape_color[x]))
+		return name[:-5]
