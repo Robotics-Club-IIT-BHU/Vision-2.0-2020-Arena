@@ -7,7 +7,7 @@
 
 Vision 2.0 is an **Image-Processing based Robotics Competition** being organized by the Robotics Club, IIT (BHU), Varanasi to facilitate learning about different components of image processing and its application in building robots capable of autonomous movement.
 In this online semester, as all of us are not present physically in the campus, conducting a physical robotics competition was not feasible. Hence, this year the event will be held online using **[PyBullet](https://pybullet.org/) - a python module for physics simulations of robots.**  
-This repository holds the **official arena for the event** which will be used for evaluation of the submissions by the participants. The Arena is in the form of an OpenAI gym and **relevant guidelines related to its usage can be found [here]().**
+This repository holds the **official arena for the event** which will be used for evaluation of the submissions by the participants. The Arena is in the form of an OpenAI gym and **relevant guidelines related to its usage can be found [here](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/helper.py).** Run this code from your terminal (make sure the path of the terminal is this repository) and you will see all the helper functions on the terminal window.
 
 ## Installation Guidelines
 
@@ -31,6 +31,6 @@ Before installing this arena, you need to download certain modules on which it i
       pip install -e vision-arena
       ~~~
 
-   * To check whether the installation has been successful, you can refer to our guide/cheatsheet to know how to build the gym in your own python script as well as use the utility functions.
+   * To check whether the installation has been successful, you can refer to our guide/cheatsheet to know how to build the gym in your own python script as well as use the utility functions. You can also check this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/Arena_Test.py) which shows the implementation of a few functions in the guide.
 
 In case there are problems with the PyBullet installation, you can refer to this [guide](https://github.com/Robotics-Club-IIT-BHU/Robo-Summer-Camp-20/blob/master/Part1/Subpart%201/README.md).
