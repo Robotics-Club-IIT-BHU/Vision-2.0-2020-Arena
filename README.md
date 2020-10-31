@@ -4,7 +4,7 @@
 </p>
 
 # Vision 2.0, 2020
-Vision 2.0 is an **image-processing based robotics competition** being organized by the Robotics Club of IIT (BHU), Varansi to facilitate learning about different components of image processing and its application in building robots capable of autonomous movement.
+Vision 2.0 is an **image-processing based robotics competition** being organized by the Robotics Club of IIT (BHU), Varanasi to facilitate learning about different components of image processing and its application in building robots capable of autonomous movement.
 In this online semester, as all of us are not present physically in the campus, conducting a physical robotics competition was not feasible. Hence, this year the event will be held online using **PyBullet - a python module for physics simulations of robots.** 
 This repository holds the **official arena for the event** which will be used for evaluation of the submissions by the participants. The Arena is in the form of a gym and **relevant guidelines related to its usage can be found [here]().**
 
