@@ -21,8 +21,8 @@ class VisionArena(gym.Env):
 		self.load_arena()
 		self.husky = p.loadURDF('husky/husky.urdf',[0,0,0.1],p.getQuaternionFromEuler([0,0,0]))
 
-	def move_husky(self, leftFrontWheel, rightFrontWheel, leftRearWheel, RighRearWheel):
-		self.move(self.husky, leftFrontWheel, rightFrontWheel, leftRearWheel, RighRearWheel)
+	def move_husky(self, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
+		self.move(self.husky, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel)
 
 	def reset(self):
 		p.resetSimulation()
