@@ -22,7 +22,7 @@ For Windows Users:
    pip install opencv-python
 ~~~
 3. **PyBullet** <br>
-   For installation of PyBullet you can refer this [guide](https://github.com/Robotics-Club-IIT-BHU/Robo-Summer-Camp-20/blob/master/README.md).
+   For installation of PyBullet you can refer this [guide](https://github.com/Robotics-Club-IIT-BHU/Robo-Summer-Camp-20/blob/master/Part1/Subpart%201/README.md).
 
 4. **Numpy** <br>
 For Windows Users:
