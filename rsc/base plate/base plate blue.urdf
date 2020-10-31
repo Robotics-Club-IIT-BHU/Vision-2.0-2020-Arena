@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
-  <robot name="square">
+  <robot name="base plate">
 
     <link name="Untitled">
       <inertial>
@@ -11,14 +11,14 @@
       <visual name="Cube">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <box size="0.01 0.19 0.19"/>
+          <box size="0.75 0.75 0.01"/>
         </geometry>
-        <material name="Material.002"/>
+        <material name="Material.004"/>
       </visual>
     </link>
 
-    <material name="Material.002">
-      <color rgba="0.64 0 0 1.0"/>
+    <material name="Material.004">
+      <color rgba="0 0 1 1.0"/>
     </material>
 
   </robot>

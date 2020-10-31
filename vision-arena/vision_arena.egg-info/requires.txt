@@ -1,3 +1,3 @@
 gym
-opencv-python
 pybullet
+opencv-python
