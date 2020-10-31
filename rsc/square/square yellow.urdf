@@ -11,7 +11,7 @@
       <visual name="Cube">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <box size="0.50 0.50 0.01"/>
+          <box size="0.60 0.60 0.01"/>
         </geometry>
         <material name="Material.002"/>
       </visual>
