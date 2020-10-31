@@ -77,66 +77,66 @@ class VisionArena(gym.Env):
 		}
 		def get_postion(i, j):
 			if self.arena[i, j] % 3 == 2: # If the shape is a triangle
-				return [3.2-i*0.75, 3.2-j*0.75, 0.03]
-			return [3-i*0.75,3-j*0.75,0.03]
+				return [4.3-i*1, 4.3-j*1, 0.03]
+			return [4-i*1,4-j*1,0.03]
 
 		for i in range(9):
 			for j in range(9):
 				if (i==0 or i==8) and j!=4:
-						p.loadURDF('rsc/base plate/base plate white.urdf', [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF('rsc/base plate/base plate white.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 						self.arena[i, j] = self.arena[i, j] + 1
 				elif (i==1 or i==7) and (j==0 or j==8):
-						p.loadURDF('rsc/base plate/base plate white.urdf', [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF('rsc/base plate/base plate white.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 						self.arena[i, j] = self.arena[i, j] + 1
 				elif (i==2 or i==6) and (j!=1 and j!=7 and j!=4):
-						p.loadURDF('rsc/base plate/base plate white.urdf', [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF('rsc/base plate/base plate white.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 						self.arena[i, j] = self.arena[i, j] + 1
 				elif (i==3 or i==5) and (j%2==0 and j!=4):
-						p.loadURDF('rsc/base plate/base plate white.urdf', [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF('rsc/base plate/base plate white.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 						self.arena[i, j] = self.arena[i, j] + 1
 				elif (i==4 and j!=4):
 					if j<4:
-						p.loadURDF(base_plate_dict[base_plate_colours[0]], [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF(base_plate_dict[base_plate_colours[0]], [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if j==0:
-							p.loadURDF('rsc/arrow/arrow.urdf', [3-i*0.75,3-j*0.75,0.03], p.getQuaternionFromEuler([0,0,-np.pi/2]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,-np.pi/2]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[0] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 							self.arena[i, j] = (base_plate_colours[0] + 1) * 6 + self.arena[i, j] + 1
 					else:
-						p.loadURDF(base_plate_dict[base_plate_colours[1]], [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF(base_plate_dict[base_plate_colours[1]], [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if j == 8:
-							p.loadURDF('rsc/arrow/arrow.urdf', [3-i*0.75,3-j*0.75,0.03], p.getQuaternionFromEuler([0,0,np.pi/2]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,np.pi/2]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[1] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 							self.arena[i, j] = (base_plate_colours[1] + 1) * 6 + self.arena[i, j] + 1
 				elif (j == 4 and i != 4):
 					if i < 4:
-						p.loadURDF(base_plate_dict[base_plate_colours[2]], [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF(base_plate_dict[base_plate_colours[2]], [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if i == 0:
-							p.loadURDF('rsc/arrow/arrow.urdf', [3-i*0.75,3-j*0.75,0.03], p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[2] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 							self.arena[i, j] = (base_plate_colours[2] + 1) * 6 + self.arena[i, j] + 1
 					else:
-						p.loadURDF(base_plate_dict[base_plate_colours[3]], [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+						p.loadURDF(base_plate_dict[base_plate_colours[3]], [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if i == 8:
-							p.loadURDF('rsc/arrow/arrow.urdf', [3-i*0.75,3-j*0.75,0.03], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[3] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 							self.arena[i, j] = (base_plate_colours[3] + 1) * 6 + self.arena[i, j] + 1
 				elif i == 4 and j == 4:
-					p.loadURDF('rsc/base plate/base plate white.urdf', [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+					p.loadURDF('rsc/base plate/base plate white.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 					self.arena[i, j] = -1
 				else:
-					p.loadURDF('rsc/base plate/base plate black.urdf', [3-i*0.75,3-j*0.75,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+					p.loadURDF('rsc/base plate/base plate black.urdf', [4-i*1,4-j*1,0], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 					self.arena[i, j] = 0
 		print(self.arena)
 
@@ -148,13 +148,13 @@ class VisionArena(gym.Env):
 
 	def camera_feed(self):
 		look = [0, 0, 0.2]
-		cameraeyepos = [0, 0, 5]
+		cameraeyepos = [0, 0, 6.5]
 		cameraup = [0, -1, 0]
 		self._view_matrix = p.computeViewMatrix(cameraeyepos, look, cameraup)
 		fov = 75
 		aspect = self._width / self._height
 		near = 0.8
-		far = 7
+		far = 10
 		self._proj_matrix = p.computeProjectionMatrixFOV(fov, aspect, near, far)
 		img_arr = p.getCameraImage(width=self._width,
                                height=self._height,
@@ -173,4 +173,4 @@ class VisionArena(gym.Env):
 		pos = [[0,4], [4,0], [8,4], [4,8]]
 		ori = [-np.pi/2, 0, np.pi/2, np.pi]
 		x = np.random.randint(0,3)
-		self.husky = p.loadURDF('husky/husky.urdf', [3-0.75*pos[x][0],3-0.75*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
+		self.husky = p.loadURDF('husky/husky.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
