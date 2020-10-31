@@ -19,7 +19,10 @@ class VisionArena(gym.Env):
 		p.configureDebugVisualizer(p.COV_ENABLE_SHADOWS, 0)
 		
 		self.load_arena()
-		self.husky = p.loadURDF('husky/husky.urdf',[0,0,0.1],p.getQuaternionFromEuler([0,0,0]))
+		self.respawn_car()
+
+		self._width = 512
+		self._height = 512
 
 	def move_husky(self, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
 		self.move(self.husky, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel)
@@ -142,3 +145,32 @@ class VisionArena(gym.Env):
 		p.setJointMotorControl2(car,  3, p.VELOCITY_CONTROL, targetVelocity=rightFrontWheel, force=15)
 		p.setJointMotorControl2(car,  4, p.VELOCITY_CONTROL, targetVelocity=leftRearWheel, force=15)
 		p.setJointMotorControl2(car,  5, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=15)
+
+	def camera_feed(self):
+		look = [0, 0, 0.2]
+		cameraeyepos = [0, 0, 5]
+		cameraup = [0, -1, 0]
+		self._view_matrix = p.computeViewMatrix(cameraeyepos, look, cameraup)
+		fov = 75
+		aspect = self._width / self._height
+		near = 0.8
+		far = 7
+		self._proj_matrix = p.computeProjectionMatrixFOV(fov, aspect, near, far)
+		img_arr = p.getCameraImage(width=self._width,
+                               height=self._height,
+                               viewMatrix=self._view_matrix,
+                               projectionMatrix=self._proj_matrix,
+                               renderer=p.ER_BULLET_HARDWARE_OPENGL)
+		rgb = img_arr[2]
+		rgb = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
+		return rgb
+
+	def remove_car(self):
+		p.removeBody(self.husky)
+
+	def respawn_car(self):
+		np.random.seed(0)
+		pos = [[0,4], [4,0], [8,4], [4,8]]
+		ori = [-np.pi/2, 0, np.pi/2, np.pi]
+		x = np.random.randint(0,3)
+		self.husky = p.loadURDF('husky/husky.urdf', [3-0.75*pos[x][0],3-0.75*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
