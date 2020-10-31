@@ -77,7 +77,7 @@ class VisionArena(gym.Env):
 		}
 		def get_postion(i, j):
 			if self.arena[i, j] % 3 == 2: # If the shape is a triangle
-				return [4.3-i*1, 4.3-j*1, 0.03]
+				return [4.2-i*1, 4.2-j*1, 0.03]
 			return [4-i*1,4-j*1,0.03]
 
 		for i in range(9):
