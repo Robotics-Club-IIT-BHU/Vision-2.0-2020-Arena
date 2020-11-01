@@ -88,6 +88,34 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
       <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
     </inertial>
   </link>
+  <link name="aruco_base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.4 0.4 0.01"/>
+      </geometry>
+      <material name="White"/>
+    </visual>
+  </link>
+  <joint name="base_to_aruco" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.3"/>
+    <parent link="base_link"/>
+    <child link="aruco_base"/>
+  </joint>
+  <link name="aruco">
+    <visual>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/Aruco.stl" scale="0.008 0.002 0.008"/>
+      </geometry>
+      <material name="Black"/>
+    </visual>
+  </link>
+  <joint name="b_to_aruco" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.001"/>
+    <parent link="aruco_base"/>
+    <child link="aruco"/>
+  </joint>
   <gazebo reference="base_link">
     </gazebo>
   <!-- IMU Link is the standard mounting position for the UM6 IMU.-->
