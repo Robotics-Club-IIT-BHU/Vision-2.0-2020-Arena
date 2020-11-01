@@ -17,7 +17,7 @@ board = aruco.GridBoard_create(
 # Create vectors we'll be using for rotations and translations for postures
 rvecs, tvecs = None, None
 
-img=cv2.imread('testrun0.png')
+img=cv2.imread('media/testrun0.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     #Detect Aruco markers
@@ -33,4 +33,4 @@ if ids is not None:
 
 img = aruco.drawDetectedMarkers(img, corners, borderColor=(0, 0, 255))
 
-cv2.imwrite("aruco_detected.png", img)
+cv2.imwrite("media/aruco_detected.png", img)
