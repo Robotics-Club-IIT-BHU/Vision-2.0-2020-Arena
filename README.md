@@ -59,7 +59,9 @@ env = gym.make("vision_arena-v0")
    * `env.reset()`
       This will reset the whole arena. This function cannot be used for your final submission.  
       
-## Arena from the Camera Feed
+## A sample arena from the Camera Feed
 <p align="center">
  <img  width="400" height="400" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/media/aruco_detected.png"><br>
 </p>
+
+Please note that this image is only indicative, and the arena may be be shuffled.
