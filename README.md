@@ -34,3 +34,27 @@ Before installing this arena, you need to download certain modules on which it i
    * To check whether the installation has been successful, you can refer to our guide/cheatsheet to know how to build the gym in your own python script as well as use the utility functions. You can also check this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/Arena_Test.py) which shows the implementation of a few functions in the guide.
 
 In case there are problems with the PyBullet installation, you can refer to this [guide](https://github.com/Robotics-Club-IIT-BHU/Robo-Summer-Camp-20/blob/master/Part1/Subpart%201/README.md).
+
+## Using the Arena  
+
+0. You will have to import the package vision_arena, which will be available only if you completed step 1 in the Installation Guidelines. The arena can be instantiated by using:
+
+~~~python
+env = gym.make("vision_arena-v0")
+~~~
+
+1. Then, you will have to create the working loop, as is normally done in pybullet(using `stepSimulation()`)
+
+2. The functions of the environment available to you for various purposes are as follows. Please go through the functions themselves in this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/vision-arena/vision_arena/envs/vision2arena.py), if you wish to know their arguments and/or return values.
+   * `env.camera_feed()`  
+      This will return an RGB image of the arena as if a camera was placed on top of the arena.
+   * `env.remove_car()`  
+      This will be used to remove the car from the arena, in case you want to have a good look at it.
+   * `env.respawn_car()`  
+      This will be used to respawn the car into the arena, **only after removing it**.
+   * `env.roll_dice()`  
+      This will simulate the rolling of the dice and will give the next shape and colour to which the car shall have to move.
+   * `env.move_husky()`  
+      This will be used to give the motor velocity to each wheel individually of the car.
+   * `env.reset()`
+      This will reset the whole arena. This function cannot be used for your final submission.  
