@@ -1,4 +1,3 @@
-README.md
 setup.py
 vision_arena.egg-info/PKG-INFO
 vision_arena.egg-info/SOURCES.txt
