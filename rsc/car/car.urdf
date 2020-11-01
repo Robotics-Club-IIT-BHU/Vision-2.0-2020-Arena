@@ -96,6 +96,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
       </geometry>
       <material name="White"/>
     </visual>
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
   </link>
   <joint name="base_to_aruco" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.3"/>
@@ -110,6 +115,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
       </geometry>
       <material name="Black"/>
     </visual>
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
   </link>
   <joint name="b_to_aruco" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.001"/>
