@@ -37,7 +37,7 @@ In case there are problems with the PyBullet installation, you can refer to this
 
 ## Using the Arena  
 
-0. You will have to import the package vision_arena, which will be available only if you completed step 1 in the Installation Guidelines. The arena can be instantiated by using:
+0. You will have to import the package vision_arena, which will be available only if you've completed step 1 in the Installation Guidelines. The arena can be initialized by using:
 
 ~~~python
 env = gym.make("vision_arena-v0")
@@ -45,7 +45,7 @@ env = gym.make("vision_arena-v0")
 
 1. Then, you will have to create the working loop, as is normally done in pybullet(using `stepSimulation()`)
 
-2. The functions of the environment available to you for various purposes are as follows. Please go through the functions themselves in this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/vision-arena/vision_arena/envs/vision2arena.py), if you wish to know their arguments and/or return values.
+2. The functions of the environment, available to you for various purposes, are as follows. Please go through the functions themselves in this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/vision-arena/vision_arena/envs/vision2arena.py), if you wish to know their arguments and/or return values.
    * `env.camera_feed()`  
       This will return an RGB image of the arena as if a camera was placed on top of the arena.
    * `env.remove_car()`  
