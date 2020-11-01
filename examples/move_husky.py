@@ -4,15 +4,13 @@ import time
 import pybullet as p
 import pybullet_data
 import cv2
+import os
 
 if __name__=="__main__":
+    parent_path = os.path.dirname(os.getcwd())
+    os.chdir(parent_path)
     env = gym.make("vision_arena-v0")
-    x=0
+    time.sleep(5)
     while True:
         p.stepSimulation()
         env.move_husky(5, 5, 5, 5)
-        if x==100:
-            img = env.camera_feed()
-            cv2.imwrite('media/testrun'+str(x)+'.png', img)
-        x+=1
-    time.sleep(100)
