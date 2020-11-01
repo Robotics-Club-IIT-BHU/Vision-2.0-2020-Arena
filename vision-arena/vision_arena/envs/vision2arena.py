@@ -229,7 +229,6 @@ class VisionArena(gym.Env):
                                renderer=p.ER_BULLET_HARDWARE_OPENGL)
 		rgb = img_arr[2]
 		rgb = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
-		print(type(rgb))
 		return rgb
 
 	def remove_car(self):
