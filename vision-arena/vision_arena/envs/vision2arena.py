@@ -269,9 +269,9 @@ class VisionArena(gym.Env):
 		pos = [[0,4], [4,0], [8,4], [4,8]]
 		ori = [-np.pi/2, 0, np.pi/2, np.pi]
 		x = np.random.randint(0,3)
-		self.husky = p.loadURDF('husky/husky.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
-		self.aruco = p.loadURDF('rsc/aruco/aruco.urdf', [4-1*pos[x][0],4-1*pos[x][1],1.2], p.getQuaternionFromEuler([1.5707,0,ori[x]]))
-		p.createConstraint(self.husky, -1, self.aruco, -1, p.JOINT_FIXED, [0,0,1], [0,0,0.4], [0,0,0], childFrameOrientation = p.getQuaternionFromEuler([0,-1.5707,ori[x]]))
+		self.husky = p.loadURDF('rsc/car/car.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
+		#self.aruco = p.loadURDF('rsc/aruco/aruco.urdf', [4-1*pos[x][0],4-1*pos[x][1],1.2], p.getQuaternionFromEuler([1.5707,0,ori[x]]))
+		#p.createConstraint(self.husky, -1, self.aruco, -1, p.JOINT_FIXED, [0,0,1], [0,0,0.4], [0,0,0], childFrameOrientation = p.getQuaternionFromEuler([0,-1.5707,ori[x]]))
 		for x in range(100):
 			p.stepSimulation()
 
