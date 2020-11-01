@@ -29,7 +29,7 @@ class VisionArena(gym.Env):
 
 		p.connect(p.GUI)
 		p.setAdditionalSearchPath(pybullet_data.getDataPath())
-		p.setGravity(0,0,-10)
+		p.setGravity(0,0,-15)
 		p.loadURDF('rsc/plane.urdf',[0,0,-0.1], useFixedBase=1)
 		p.configureDebugVisualizer(p.COV_ENABLE_WIREFRAME, 0)
 		p.configureDebugVisualizer(p.COV_ENABLE_SHADOWS, 0)
@@ -199,10 +199,10 @@ class VisionArena(gym.Env):
 					self.arena[i, j] = 0
 
 	def __move(self, car, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
-		p.setJointMotorControl2(car,  2, p.VELOCITY_CONTROL, targetVelocity=leftFrontWheel, force=15)
-		p.setJointMotorControl2(car,  3, p.VELOCITY_CONTROL, targetVelocity=rightFrontWheel, force=15)
-		p.setJointMotorControl2(car,  4, p.VELOCITY_CONTROL, targetVelocity=leftRearWheel, force=15)
-		p.setJointMotorControl2(car,  5, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=15)
+		p.setJointMotorControl2(car,  4, p.VELOCITY_CONTROL, targetVelocity=leftFrontWheel, force=30)
+		p.setJointMotorControl2(car,  5, p.VELOCITY_CONTROL, targetVelocity=rightFrontWheel, force=30)
+		p.setJointMotorControl2(car,  6, p.VELOCITY_CONTROL, targetVelocity=leftRearWheel, force=30)
+		p.setJointMotorControl2(car,  7, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=30)
 
 	def camera_feed(self):
 		"""
@@ -270,8 +270,9 @@ class VisionArena(gym.Env):
 		ori = [-np.pi/2, 0, np.pi/2, np.pi]
 		x = np.random.randint(0,3)
 		self.husky = p.loadURDF('rsc/car/car.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
+		#self.husky = p.loadURDF('husky/husky.urdf', [4-1*pos[x][0],4-1*pos[x][1],0], p.getQuaternionFromEuler([0,0,ori[x]]))
 		#self.aruco = p.loadURDF('rsc/aruco/aruco.urdf', [4-1*pos[x][0],4-1*pos[x][1],1.2], p.getQuaternionFromEuler([1.5707,0,ori[x]]))
-		#p.createConstraint(self.husky, -1, self.aruco, -1, p.JOINT_FIXED, [0,0,1], [0,0,0.4], [0,0,0], childFrameOrientation = p.getQuaternionFromEuler([0,-1.5707,ori[x]]))
+		#p.createConstraint(self.husky, -1, self.aruco, -1, p.JOINT_FIXED, [0,0,1], [0,0,0.4], [0,0,0], childFrameOrientation = p.getQuaternionFromEuler([0,0,1]))
 		for x in range(100):
 			p.stepSimulation()
 
