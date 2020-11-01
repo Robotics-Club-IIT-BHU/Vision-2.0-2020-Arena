@@ -41,31 +41,40 @@ class VisionArena(gym.Env):
 		self._height = 512
 
 	def move_husky(self, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel):
-		"""move_husky Function 
+		"""
 		Function to give Velocities to the wheels of the robot.
 			
 		Arguments:
-		leftFrontWheel -- Velocity of the front left wheel
-		rightFrontWheel -- Velocity of the front right wheel
-		leftRearWheel -- Velocity of the rear left wheel
-		rightRearWheel -- Velocity of the rear right wheel
 
-		No Return Values.
+			leftFrontWheel - Velocity of the front left wheel  
+			rightFrontWheel - Velocity of the front right wheel  
+			leftRearWheel - Velocity of the rear left wheel  
+			rightRearWheel - Velocity of the rear right wheel  
+
+
+		Return Values:
+
+			None
 		"""
 
 		self.__move(self.husky, leftFrontWheel, rightFrontWheel, leftRearWheel, rightRearWheel)
 
 	def reset(self):
-		"""reset Function
+		"""
 		Function to restart the simulation.
 
-		This will undo all the previous simulation commands and the
+		This will undo all the previous simulation commands and the \
 		arena along with the robot will be loaded again.
+		
 		Only for testing purposes. Won't be used in final evaluation.
 
-		No Arguments.
+		Arguments:
 
-		No Return Values.
+			None
+
+		Return Values:
+
+			None
 		"""
 		np.random.seed(0)
 		p.resetSimulation()
@@ -149,7 +158,7 @@ class VisionArena(gym.Env):
 					if j<4:
 						p.loadURDF(base_plate_dict[base_plate_colours[0]], get_base_plate_position(i, j), p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if j==0:
-							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,-np.pi/2]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4.1-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,-np.pi/2]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[0] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
@@ -157,7 +166,7 @@ class VisionArena(gym.Env):
 					else:
 						p.loadURDF(base_plate_dict[base_plate_colours[1]], get_base_plate_position(i, j), p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if j == 8:
-							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,np.pi/2]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [3.9-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,np.pi/2]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[1] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
@@ -166,7 +175,7 @@ class VisionArena(gym.Env):
 					if i < 4:
 						p.loadURDF(base_plate_dict[base_plate_colours[2]], get_base_plate_position(i, j), p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if i == 0:
-							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,3.9-j*1,0.03], p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[2] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
@@ -174,7 +183,7 @@ class VisionArena(gym.Env):
 					else:
 						p.loadURDF(base_plate_dict[base_plate_colours[3]], get_base_plate_position(i, j), p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 						if i == 8:
-							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4-j*1,0.03], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
+							p.loadURDF('rsc/arrow/arrow.urdf', [4-i*1,4.1-j*1,0.03], p.getQuaternionFromEuler([0,0,0]), useFixedBase=1)
 							self.arena[i, j] = base_plate_colours[3] + 31
 						else:
 							p.loadURDF(shape_colour_dict[self.arena[i, j]], get_postion(i, j), p.getQuaternionFromEuler([0,0,np.pi]), useFixedBase=1)
@@ -193,12 +202,16 @@ class VisionArena(gym.Env):
 		p.setJointMotorControl2(car,  5, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=15)
 
 	def camera_feed(self):
-		"""camera_feed Function
+		"""
 		Function to get camera feed of the arena.
 
-		No Arguments.
+		Arguments:
+
+			None
 		
-		Returns -- rgb image from the camera feed
+		Return Values:
+
+			numpy array of RGB values
 		"""
 		look = [0, 0, 0.2]
 		cameraeyepos = [0, 0, 6.5]
@@ -216,25 +229,34 @@ class VisionArena(gym.Env):
                                renderer=p.ER_BULLET_HARDWARE_OPENGL)
 		rgb = img_arr[2]
 		rgb = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
+		print(type(rgb))
 		return rgb
 
 	def remove_car(self):
-		"""remove_car Function
-		Function to remove the car from the arena
+		"""
+		Function to remove the car from the arena.
 
-		No Arguments.
+		Arguments:
 
-		No Return Values.
+			None
+
+		Return Values:
+
+			None
 		"""
 		p.removeBody(self.husky)
 
 	def respawn_car(self):
-		"""respawn_car Function
-		Function to respawn the car from the arena
+		"""
+		Function to respawn the car from the arena.
 
-		No Arguments.
+		Arguments:
 
-		No Return Values.
+			None
+
+		Return Values:
+
+			None
 		"""
 		np.random.seed(0)
 		pos = [[0,4], [4,0], [8,4], [4,8]]
@@ -245,21 +267,25 @@ class VisionArena(gym.Env):
 		p.createConstraint(self.husky, -1, self.aruco, -1, p.JOINT_FIXED, [0,0,1], [0,0,0.4], [0,0,0], childFrameOrientation = p.getQuaternionFromEuler([0,-1.5707,ori[x]]))
 
 	def roll_dice(self):
-		"""roll_dice Function
-		Function imitating a ludo dice
+		"""
+		Function imitating a ludo dice.
 		
 		This function gives the next shape and color to move to in the arena.
 		
-		No Arguments.
-		
-		Returns -- a random string determining the shape and color
-		The string maybe anyone of the follows:
-		square yellow
-	        circle yellow
-	        triangle yellow
-	        square red
-                circle red
-		triangle red
+		Arguments:
+
+			None
+
+		Return Values:
+
+			A string of one of the following:
+
+				circle yellow  
+				triangle yellow  
+				square yellow    
+				circle red  
+				triangle red  
+				square red
 		"""
 
 		x = random.randint(0,5)
