@@ -43,7 +43,7 @@ In case there are problems with the PyBullet installation, you can refer to this
 env = gym.make("vision_arena-v0")
 ~~~
 
-1. Then, you will have to create the working loop, as is normally done in pybullet(using `stepSimulation()`)
+1. Then, you will have to create the working loop, as is normally done in pybullet (using `stepSimulation()`).
 
 2. The functions of the environment, available to you for various purposes, are as follows. Please go through the functions themselves in this [file](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/vision-arena/vision_arena/envs/vision2arena.py), if you wish to know their arguments and/or return values.
    * `env.camera_feed()`  
