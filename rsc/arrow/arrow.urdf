@@ -11,7 +11,7 @@
       <visual name="Arrow">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="Arrow.stl" scale="0.015 0.00957 0.005"/>
+          <mesh filename="Arrow.stl" scale="0.015 0.012 0.005"/>
         </geometry>
         <material name="Material.005"/>
       </visual>
