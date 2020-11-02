@@ -58,6 +58,8 @@ env = gym.make("vision_arena-v0")
       This will be used to give the motor velocity to each wheel individually of the car.
    * `env.reset()`
       This will reset the whole arena. This function cannot be used for your final submission.  
+  
+ 3. You can refer the file **helper.py** to see the documentation of the different functions and **aruco_test.py** to see the detection of aruco marker.
       
 ## A sample arena from the Camera Feed
 <p align="center">
