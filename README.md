@@ -66,7 +66,7 @@ env = gym.make("vision_arena-v0")
 
 Please note that this image is only indicative, and the arena may be be shuffled.
 
-## Makers of this repository:-
+## Makers of this Repository
 
  
 <table>
