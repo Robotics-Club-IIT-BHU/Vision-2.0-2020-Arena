@@ -290,14 +290,16 @@ class VisionArena(gym.Env):
 
 			A string of one of the following:
 
-				circle yellow  
-				triangle yellow  
-				square yellow    
-				circle red  
-				triangle red  
-				square red
+				CY - (circle yellow)  
+				TY - (triangle yellow)  
+				SY - (square yellow)    
+				CR - (circle red)
+				TR - (triangle red)  
+				SR - (square red)
 		"""
 
 		x = random.randint(0,5)
 		name = basename(normpath(self.shape_color[x]))
-		return name[:-5]
+		code_list = name[:-5].split(' ')
+		code = code_list[0][0].capitalize() + code_list[1][0].capitalize()
+		return code
