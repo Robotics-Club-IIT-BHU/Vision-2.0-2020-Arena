@@ -19,7 +19,6 @@ Before installing this arena, you need to download certain modules on which it i
 0. Although not compulsory, we strongly recommend creating a virtual environment specific to this project. This will help in package management and for decluttering your workspace. A simple way to create a virtual environment is as follows:
 
    ~~~bash
-   pip3 install venv
    python3 -m venv <Env_Name>
    ~~~
 
