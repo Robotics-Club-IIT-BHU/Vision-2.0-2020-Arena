@@ -1,5 +1,4 @@
 gym
 pybullet
-opencv-python
 opencv-contrib-python
 numpy
