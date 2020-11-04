@@ -204,7 +204,7 @@ class VisionArena(gym.Env):
 		p.setJointMotorControl2(car,  6, p.VELOCITY_CONTROL, targetVelocity=leftRearWheel, force=30)
 		p.setJointMotorControl2(car,  7, p.VELOCITY_CONTROL, targetVelocity=rightRearWheel, force=30)
 
-	def camera_feed(self):
+	def camera_feed(self, is_flat = False):
 		"""
 		Function to get camera feed of the arena.
 
@@ -231,6 +231,10 @@ class VisionArena(gym.Env):
                                projectionMatrix=self._proj_matrix,
                                renderer=p.ER_BULLET_HARDWARE_OPENGL)
 		rgb = img_arr[2]
+		if is_flat == True:
+			# Only for those who are getting a blank image in opencv
+			rgb = np.array(rgb)
+			rgb = np.reshape(rgb, (512, 512, 4))
 		rgb = np.uint8(rgb)
 		rgb = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
 		return rgb
