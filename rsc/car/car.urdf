@@ -90,9 +90,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   </link>
   <link name="aruco_base">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 -0.1 0"/>
       <geometry>
-        <box size="0.6 0.6 0.01"/>
+        <box size="1.2 1.2 0.01"/>
       </geometry>
       <material name="White"/>
     </visual>
@@ -103,15 +103,15 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </inertial>
   </link>
   <joint name="base_to_aruco" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0.3"/>
+    <origin rpy="0 0 0" xyz="0 -0.1 0.3"/>
     <parent link="base_link"/>
     <child link="aruco_base"/>
   </joint>
   <link name="aruco">
     <visual>
-      <origin rpy="1.5707 0 1.5707" xyz="0 0 0"/>
+      <origin rpy="1.5707 0 1.5707" xyz="0 -0.1 0"/>
       <geometry>
-        <mesh filename="meshes/Aruco.stl" scale="0.008 0.002 0.008"/>
+        <mesh filename="meshes/Aruco.stl" scale="0.02 0.002 0.02"/>
       </geometry>
       <material name="Black"/>
     </visual>
