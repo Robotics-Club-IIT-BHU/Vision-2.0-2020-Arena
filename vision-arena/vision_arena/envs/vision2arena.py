@@ -231,6 +231,7 @@ class VisionArena(gym.Env):
                                projectionMatrix=self._proj_matrix,
                                renderer=p.ER_BULLET_HARDWARE_OPENGL)
 		rgb = img_arr[2]
+		rgb = np.uint8(rgb)
 		rgb = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
 		return rgb
 
