@@ -158,4 +158,14 @@ Please note that this image is only indicative, and the arena may be be shuffled
       </a>
       <br />
    </td>   
+   <td align="center">
+      <a href="https://github.com/dinesh-easwar">
+         <img src="https://avatars2.githubusercontent.com/u/51148589?s=400&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Dinesh Easwaravaka</b>
+         </sub>
+      </a>
+      <br />
+   </td>   
 </table>
