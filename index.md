@@ -5,8 +5,8 @@ In this online semester, as all of us are not present physically in the campus, 
 This repository holds the **official arena for the event** which will be used for evaluation of the submissions by the participants. The Arena is in the form of an OpenAI gym and **relevant guidelines related to its usage can be found by running [this](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/helper.py) file.** Run this code from your terminal (make sure the path of the terminal is this repository) and you will see all the helper functions on the terminal window.
 
 <p align="center">
- <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif">
- <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/husky.gif"><br>
+ <img src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif" width="400px;" height="250px;">
+ <img src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/husky.gif" width="400px;" height="250px;"><br>
 </p>
 
 ### Installation Guidelines
@@ -64,7 +64,7 @@ env = gym.make("vision_arena-v0")
 
 Please note that this image is only indicative, and the arena may be be shuffled.
 <p align="center">
- <img  width="400" height="400" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/media/aruco_detected.png"><br>
+ <img src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/media/aruco_detected.png" width="400px;" height="400px;" ><br>
 </p>
 
 ### Arena made and maintained by
