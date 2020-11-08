@@ -64,7 +64,7 @@ env = gym.make("vision_arena-v0")
 
 Please note that this image is only indicative, and the arena may be be shuffled.
 <p align="center">
- <img src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/media/aruco_detected.png" width="400px;" height="400px;" ><br>
+ <img src="media/aruco_detected.png" width="400px;" height="400px;" ><br>
 </p>
 
 ### Arena made and maintained by
