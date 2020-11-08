@@ -1,3 +1,8 @@
+<p align="center">
+ <img  width="400" height="400" src="media/robo.jpg"><br>
+  <i>presents:</i>  
+</p>
+
 ## Vision 2.0, 2020
 
 Vision 2.0 is an **Image-Processing based Robotics Competition** being organized by the Robotics Club, IIT (BHU), Varanasi to facilitate learning about different components of image processing and its application in building robots capable of autonomous movement.
