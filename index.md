@@ -3,14 +3,6 @@
 Vision 2.0 is an **Image-Processing based Robotics Competition** being organized by the Robotics Club, IIT (BHU), Varanasi to facilitate learning about different components of image processing and its application in building robots capable of autonomous movement.
 In this online semester, as all of us are not present physically in the campus, conducting a physical robotics competition was not feasible. Hence, this year the event will be held online using **[PyBullet](https://pybullet.org/) - a python module for physics simulations of robots.**  
 This repository holds the **official arena for the event** which will be used for evaluation of the submissions by the participants. The Arena is in the form of an OpenAI gym and **relevant guidelines related to its usage can be found by running [this](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/helper.py) file.** Run this code from your terminal (make sure the path of the terminal is this repository) and you will see all the helper functions on the terminal window.
-<p align="center">
- <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif">
- <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/husky.gif"><br>
-</p>
-
-<img src="https://robotics-club-iit-bhu.github.io/Vision-2.0-2020-Arena/gh-pages/media/arena.gif">
-                                              
-![image](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif)
 
 ### Installation Guidelines
 
@@ -64,13 +56,10 @@ env = gym.make("vision_arena-v0")
  3. You can refer the file **helper.py** to see the documentation of the different functions and **aruco_test.py** to see the detection of aruco marker.
       
 ### A sample arena from the Camera Feed
-<p align="center">
- <img  width="400" height="400" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/aruco_detected.png"><br>
-</p>
 
 Please note that this image is only indicative, and the arena may be be shuffled.
 
-### Made and maintained by
+### Arena made and maintained by
 
 <table>
    <td align="center">
@@ -104,3 +93,41 @@ Please note that this image is only indicative, and the arena may be be shuffled
       <br />
    </td>
 </table>
+
+
+### Organization and Mentorship:
+
+<table>
+   <td align="center">
+      <a href="https://github.com/Dakshgargg">
+         <img src="https://avatars3.githubusercontent.com/u/44767197?s=400&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Daksh Garg</b>
+         </sub>
+      </a>
+      <br />
+   </td>
+   <td align="center">
+      <a href="https://github.com/mayank1618">
+         <img src="https://avatars1.githubusercontent.com/u/44468053?s=400&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Mayank Chakravorty</b>
+         </sub>
+      </a>
+      <br />
+   </td>
+   <td align="center">
+      <a href="https://github.com/toothless07">
+         <img src="https://avatars2.githubusercontent.com/u/61177647?s=400&u=b50f718f16f377211be5ee96928dcd848e1b12cd&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Rhythm Mahajan</b>
+         </sub>
+      </a>
+      <br />
+   </td>
+</table>
+
+
