@@ -7,7 +7,7 @@ This repository holds the **official arena for the event** which will be used fo
  <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif">
  <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/husky.gif"><br>
 </p>
-
+![image](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif)
 
 ### Installation Guidelines
 
