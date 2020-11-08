@@ -63,6 +63,9 @@ env = gym.make("vision_arena-v0")
 ### A sample arena from the Camera Feed
 
 Please note that this image is only indicative, and the arena may be be shuffled.
+<p align="center">
+ <img  width="400" height="400" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/media/aruco_detected.png"><br>
+</p>
 
 ### Arena made and maintained by
 
