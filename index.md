@@ -143,7 +143,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
    
 </table>
 
-## Advisors
+### Advisors
 <table>
    <td align="center">
       <a href="https://github.com/lok-i">
