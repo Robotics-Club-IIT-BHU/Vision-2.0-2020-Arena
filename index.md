@@ -128,8 +128,6 @@ Please note that this image is only indicative, and the arena may be be shuffled
       </a>
       <br />
    </td>
-   
-   </td>
    <td align="center">
       <a href="https://github.com/NiranthS">
          <img src="https://avatars3.githubusercontent.com/u/44475481?s=400&v=4" width="100px;" alt=""/>
