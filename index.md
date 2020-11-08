@@ -7,6 +7,9 @@ This repository holds the **official arena for the event** which will be used fo
  <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif">
  <img  width="400" height="250" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/husky.gif"><br>
 </p>
+
+<img src="{{ site.baseurl }}/media/arena.gif"">
+                                              
 ![image](https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/arena.gif)
 
 ### Installation Guidelines
@@ -62,7 +65,7 @@ env = gym.make("vision_arena-v0")
       
 ### A sample arena from the Camera Feed
 <p align="center">
- <img  width="400" height="400" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/main/media/aruco_detected.png"><br>
+ <img  width="400" height="400" src="https://github.com/Robotics-Club-IIT-BHU/Vision-2.0-2020-Arena/blob/gh-pages/media/aruco_detected.png"><br>
 </p>
 
 Please note that this image is only indicative, and the arena may be be shuffled.
