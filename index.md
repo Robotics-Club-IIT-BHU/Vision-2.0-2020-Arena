@@ -19,13 +19,13 @@ This repository holds the **official arena for the event** which will be used fo
 <table>
    <td align="center">
       <a href="https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing">
-         <img src="media/trialRun1.png" height="200px;" width="200px;" alt=""/>
+         <img src="media/trialRun1.png" height="250px;" width="350px;" alt=""/>
       </a>
  </td>   
  
 <td align="center">
       <a href="https://drive.google.com/file/d/14Og3_cfI1JcbHm2sPB444PnselFMEJsS/view?usp=sharing">
-         <img src="media/trialRun2.png" height="200px;" width="200px;" alt=""/>
+         <img src="media/trialRun2.png" height="250px;" width="350px;" alt=""/>
       </a>
  </td>   
   
