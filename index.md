@@ -39,6 +39,7 @@ This repository holds the **official arena for the event** which will be used fo
 </table
 
 
+
 ### Installation Guidelines
 
 Before installing this arena, you need to download certain modules on which it is dependent. We **strongly** recommend using a distribution of **Linux** as your operating system for this event. Windows installations tend to be a hassle and require, in some instances, quite a bit of time and effort to complete.
