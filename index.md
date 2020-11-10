@@ -16,8 +16,8 @@ This repository holds the **official arena for the event** which will be used fo
 
 ## Best Runs of the event:
 
-[![Watch the video](media/trialRun1.png)](https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing = 250x250)
-[![Watch the video](media/trialRun2.png)](https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing = 250x250)
+[![Watch the video](media/trialRun1.png =250x250)](https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing = 250x250)
+[![Watch the video](media/trialRun2.png =250x250)](https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing = 250x250)
 
 
 ### Installation Guidelines
