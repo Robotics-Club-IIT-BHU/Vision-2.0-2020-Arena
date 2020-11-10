@@ -76,31 +76,29 @@ Please note that this image is only indicative, and the arena may be be shuffled
 
 ### Best Runs of the event:
 
+
 <table>
    <td align="center">
       <a href="https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing">
          <img src="media/trialRun1.png" height="250px;" width="400px;" alt=""/>
-          <br />
+         <br />
          <sub>
             <b>Team 1 name</b>
          </sub>
       </a>
-       <br />
- </td>   
- <td align="center">
+      <br />
+   </td>   
+   <td align="center">
       <a href="https://drive.google.com/file/d/14Og3_cfI1JcbHm2sPB444PnselFMEJsS/view?usp=sharing">
-         <img src="media/trialRun2.png" height="250px;" width="400px;" alt=""/>
-           <br />
-           <sub>
+         <img src="media/trialRun2.png"  height="250px;" width="400px;" alt=""/>
+         <br />
+         <sub>
             <b>Team 2 name</b>
          </sub>
       </a>
-       <br />
- </td>   
-</table
-
-
-
+      <br />
+   </td>   
+</table>
 
 
 ### Arena made and maintained by
