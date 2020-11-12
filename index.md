@@ -74,7 +74,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
 </p>
 
 
-### Best Runs of the event:
+### Some of the best Runs of the event:
 
 
 <table>
@@ -83,7 +83,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
          <img src="media/trialRun1.png" height="250px;" width="400px;" alt=""/>
          <br />
          <sub>
-            <b>Team 1 name</b>
+            <b>Team name: Anything You Want</b>
          </sub>
       </a>
       <br />
@@ -93,7 +93,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
          <img src="media/trialRun2.png"  height="250px;" width="400px;" alt=""/>
          <br />
          <sub>
-            <b>Team 2 name</b>
+            <b>Team HPS</b>
          </sub>
       </a>
       <br />
