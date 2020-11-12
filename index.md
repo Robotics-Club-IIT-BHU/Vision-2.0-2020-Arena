@@ -83,7 +83,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
          <img src="media/trialRun1.png" height="250px;" width="400px;" alt=""/>
          <br />
          <sub>
-            <b>Team name: Anything You Want</b>
+            <b>Team: Anything You Want</b>
          </sub>
       </a>
       <br />
@@ -93,7 +93,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
          <img src="media/trialRun2.png"  height="250px;" width="400px;" alt=""/>
          <br />
          <sub>
-            <b>Team HPS</b>
+            <b>Team: HPS</b>
          </sub>
       </a>
       <br />
@@ -101,40 +101,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
 </table>
 
 
-### Arena made and maintained by
 
-<table>
-   <td align="center">
-      <a href="https://github.com/Terabyte17">
-         <img src="https://avatars1.githubusercontent.com/u/60649571?s=400&u=e8e56b7d722ad82052f836ca929c79216144e425&v=4" width="100px;" alt=""/>
-         <br />
-         <sub>
-            <b>Yash Sahijwani</b>
-         </sub>
-      </a>
-      <br />
-   </td>
-   <td align="center">
-      <a href="https://github.com/Vikhyath08">
-         <img src="https://avatars2.githubusercontent.com/u/55887656?s=460&v=4" width="100px;" alt=""/>
-         <br />
-         <sub>
-            <b>Vikhyath Venkatraman</b>
-         </sub>
-      </a>
-      <br />
-   </td>
-   <td align="center">
-      <a href="https://github.com/Raghav-Soni">
-         <img src="https://avatars3.githubusercontent.com/u/60649723?s=460&v=4" width="100px;" alt=""/>
-         <br />
-         <sub>
-            <b>Raghav Soni</b>
-         </sub>
-      </a>
-      <br />
-   </td>
-</table>
 
 
 ### Organization and Mentorship:
@@ -205,4 +172,41 @@ Please note that this image is only indicative, and the arena may be be shuffled
       </a>
       <br />
    </td>   
+</table>
+
+
+
+### Arena made and maintained by
+
+<table>
+   <td align="center">
+      <a href="https://github.com/Terabyte17">
+         <img src="https://avatars1.githubusercontent.com/u/60649571?s=400&u=e8e56b7d722ad82052f836ca929c79216144e425&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Yash Sahijwani</b>
+         </sub>
+      </a>
+      <br />
+   </td>
+   <td align="center">
+      <a href="https://github.com/Vikhyath08">
+         <img src="https://avatars2.githubusercontent.com/u/55887656?s=460&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Vikhyath Venkatraman</b>
+         </sub>
+      </a>
+      <br />
+   </td>
+   <td align="center">
+      <a href="https://github.com/Raghav-Soni">
+         <img src="https://avatars3.githubusercontent.com/u/60649723?s=460&v=4" width="100px;" alt=""/>
+         <br />
+         <sub>
+            <b>Raghav Soni</b>
+         </sub>
+      </a>
+      <br />
+   </td>
 </table>
