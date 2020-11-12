@@ -80,7 +80,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
 <table>
    <td align="center">
       <a href="https://drive.google.com/file/d/14Fz58DQ7In2KzDeozKwDX8rMt9hl-c2W/view?usp=sharing">
-         <img src="media/trialRun1.png" height="250px;" width="400px;" alt=""/>
+         <img src="media/trialRun1.png" height="200px;" width="300px;" alt=""/>
          <br />
          <sub>
             <b>Team: Anything You Want</b>
@@ -90,7 +90,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
    </td>   
    <td align="center">
       <a href="https://drive.google.com/file/d/14Og3_cfI1JcbHm2sPB444PnselFMEJsS/view?usp=sharing">
-         <img src="media/trialRun2.png"  height="250px;" width="400px;" alt=""/>
+         <img src="media/trialRun2.png"  height="200px;" width="300px;" alt=""/>
          <br />
          <sub>
             <b>Team: HPS</b>
@@ -100,7 +100,7 @@ Please note that this image is only indicative, and the arena may be be shuffled
    </td>
    <td align="center">
       <a href="https://drive.google.com/file/d/1R-V16e5D9PBmW04BLhAcsIgCw7vD_z3o/view?usp=sharing">
-         <img src="media/trialRun3.png"  height="250px;" width="400px;" alt=""/>
+         <img src="media/trialRun3.png"  height="200px;" width="300px;" alt=""/>
          <br />
          <sub>
             <b>Team: Creative Buzz</b>
