@@ -97,7 +97,17 @@ Please note that this image is only indicative, and the arena may be be shuffled
          </sub>
       </a>
       <br />
-   </td>   
+   </td>
+   <td align="center">
+      <a href="https://drive.google.com/file/d/1R-V16e5D9PBmW04BLhAcsIgCw7vD_z3o/view?usp=sharing">
+         <img src="media/trialRun3.png"  height="250px;" width="400px;" alt=""/>
+         <br />
+         <sub>
+            <b>Team: Creative Buzz</b>
+         </sub>
+      </a>
+      <br />
+   </td> 
 </table>
 
 
